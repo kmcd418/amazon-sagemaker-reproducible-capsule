@@ -1,2 +1,6 @@
 pyyaml
 sagemaker
+pandas
+s3fs
+pyarrow
+fastparquet

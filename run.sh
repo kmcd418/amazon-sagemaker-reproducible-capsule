@@ -13,9 +13,9 @@ CAPSULE_VERSION=$(uuidgen | cut -c-8)
 # SAVE CAPSULE VERSION TO GITHUB REPO
 ##################
 echo "SAVING CAPSULE INTO GITHUB"
-# git add .
-# git commit -m CAPSULE_VERSION
-# git push
+git add .
+git commit -m CAPSULE_VERSION
+git push
 
 ##################
 # BUILD AND PUSH CONTAINER TO ECR
