@@ -46,7 +46,7 @@ echo "BUILDING CONTAINER IMAGE"
 # docker build --no-cache -t ${CAPSULE_NAME} -f environment/Dockerfile .
 # docker tag ${CAPSULE_NAME} ${CONTAINER_FULLNAME}
 
-sm-docker build . --file environment/Dockerfile --repository ${CAPSULE_NAME}:${CAPSULE_VERSION}
+sm-docker build --file environment/Dockerfile --repository ${CAPSULE_NAME}:${CAPSULE_VERSION}
 
 echo "PUSHING IMAGE TO ECR"
 # docker push ${CONTAINER_FULLNAME}
