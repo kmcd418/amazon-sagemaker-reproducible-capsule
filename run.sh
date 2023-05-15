@@ -43,11 +43,13 @@ $(aws ecr get-login --region ${AWS_REGION} --no-include-email)
 
 # Build the docker image locally with the image name and then push it to ECR
 echo "BUILDING CONTAINER IMAGE"
-docker build --no-cache -t ${CAPSULE_NAME} -f environment/Dockerfile .
-docker tag ${CAPSULE_NAME} ${CONTAINER_FULLNAME}
+# docker build --no-cache -t ${CAPSULE_NAME} -f environment/Dockerfile .
+# docker tag ${CAPSULE_NAME} ${CONTAINER_FULLNAME}
+
+sm-docker build . --file environment/Dockerfile --repository ${CAPSULE_NAME}:${CAPSULE_VERSION}
 
 echo "PUSHING IMAGE TO ECR"
-docker push ${CONTAINER_FULLNAME}
+# docker push ${CONTAINER_FULLNAME}
 
 ##################
 # LAUNCH JOB IN SAGEMAKER

@@ -1,5 +1,5 @@
 run:
-    capsule: predicting-disease-genes
+    capsule: converting-csv-to-parquet
     data: s3://sagemaker-studio-018852473448-u4fqmcenk9h/kmcd418/titanic.csv
     results: s3://sagemaker-studio-018852473448-u4fqmcenk9h/kmcd418/titanic.parquet
     instance_type: ml.m5.xlarge
