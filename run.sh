@@ -39,7 +39,7 @@ then
 fi
 
 # Get the login command from ECR and execute it directly
-$(aws ecr get-login --region ${AWS_REGION} --no-include-email)
+# $(aws ecr get-login --region ${AWS_REGION} --no-include-email)
 
 # Build the docker image locally with the image name and then push it to ECR
 echo "BUILDING CONTAINER IMAGE"
@@ -54,5 +54,5 @@ echo "PUSHING IMAGE TO ECR"
 ##################
 # LAUNCH JOB IN SAGEMAKER
 ##################
-echo "LAUNCHING JOB RUN IN SAGEMAKER"
-python reproducible_run/job.py --job_name ${CAPSULE_NAME}-${CAPSULE_VERSION} --container_image ${CONTAINER_FULLNAME}
+# echo "LAUNCHING JOB RUN IN SAGEMAKER"
+# python reproducible_run/job.py --job_name ${CAPSULE_NAME}-${CAPSULE_VERSION} --container_image ${CONTAINER_FULLNAME}
